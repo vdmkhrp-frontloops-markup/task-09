@@ -1,15 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/style.scss">
-  <link rel="icon" href="./src/img/favicon.ico" sizes="32x32" />
-  <link rel="icon" href="./src/img/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="./src/img/apple-touch-icon.png" />
-  <title>task-00</title>
-</head>
-<body>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style.scss" />
+    <link rel="icon" href="./src/img/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="./src/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./src/img/apple-touch-icon.png" />
+    <title>task-09</title>
+  </head>
+  <body>
+    <div class="wallet">
+      <aside class="wallet__sidebar">
+        <div class="wallet__head">
+          <h2 class="wallet__title">My Wallets</h2>
+          <button type="button" class="wallet__button">
+            <span class="icon icon--plus"></span>
+          </button>
+        </div>
+        <div class="wallet__cards">
+          <button type="button" class="card">
+            <img src="./src/img/visa.svg" alt="visa" class="card__image" />
+            <h3 class="card__number">**** **** **** 2562</h3>
+            <p class="card__validity">Valid thru: 12/17</p>
+          </button>
+          <button type="button" class="card card--active">
+            <img
+              src="./src/img/mastercard.svg"
+              alt="mastercard"
+              class="card__image"
+            />
+            <h3 class="card__number">**** **** **** 2101</h3>
+            <p class="card__validity">Valid thru: 07/19</p>
+          </button>
+          <button type="button" class="card">
+            <img
+              src="./src/img/maestro.svg"
+              alt="maestro"
+              class="card__image"
+            />
+            <h3 class="card__number">**** **** **** 8335</h3>
+            <p class="card__validity">Valid thru: 09/17</p>
+          </button>
+        </div>
+      </aside>
+      <div class="wallet__content">
+        <div class="wallet__head wallet__head--border">
+          <h2 class="wallet__title">Current Balance</h2>
+          <p class="wallet__total">$729.<sup>00</sup></p>
+        </div>
+        <div class="wallet__transactions">
+          <div class="transaction transaction--out">
+            <span class="transaction__icon icon icon--minus"></span>
+            <div class="transaction__info">
+              <h6 class="transaction__name">Apple iPhone 7, 128 GB</h6>
+              <p class="transaction__date">
+                Electronics #32343424 - 12 July 2015
+              </p>
+            </div>
+            <p class="transaction__total">$650.<sup>00</sup></p>
+          </div>
+          <div class="transaction transaction--in">
+            <span class="transaction__icon icon icon--plus"></span>
+            <div class="transaction__info">
+              <h6 class="transaction__name">Funds Added</h6>
+              <p class="transaction__date">Payement #5435 - 11 July 2015</p>
+            </div>
+            <p class="transaction__total">$900.<sup>00</sup></p>
+          </div>
+          <div class="transaction transaction--out">
+            <span class="transaction__icon icon icon--minus"></span>
+            <div class="transaction__info">
+              <h6 class="transaction__name">Energy Bill</h6>
+              <p class="transaction__date">Other #745237423 - 11 July 2015</p>
+            </div>
+            <p class="transaction__total">$84.<sup>90</sup></p>
+          </div>
+          <div class="transaction transaction--out">
+            <span class="transaction__icon icon icon--minus"></span>
+            <div class="transaction__info">
+              <h6 class="transaction__name">The Eye Cinema Ticket</h6>
+              <p class="transaction__date">Other #745237423 - 11 July 2015</p>
+            </div>
+            <p class="transaction__total">$40.<sup>00</sup></p>
+          </div>
+          <div class="transaction transaction--out">
+            <span class="transaction__icon icon icon--minus"></span>
+            <div class="transaction__info">
+              <h6 class="transaction__name">McFood Restaurant</h6>
+              <p class="transaction__date">Cafes #32448 - 10 July 2015</p>
+            </div>
+            <p class="transaction__total">$10.<sup>50</sup></p>
+          </div>
+          <div class="transaction transaction--out">
+            <span class="transaction__icon icon icon--minus"></span>
+            <div class="transaction__info">
+              <h6 class="transaction__name">gas station</h6>
+              <p class="transaction__date">Other #2138453 - 10 July 2015</p>
+            </div>
+            <p class="transaction__total">$30.<sup>00</sup></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
