@@ -23,6 +23,10 @@ body {
   place-items: center;
   font-family: $main-font;
   background-color: #f4c66a;
+
+  @media (width >= 768px) {
+    padding: 15px;
+  }
 }
 
 .icon {
@@ -70,27 +74,30 @@ body {
   border-radius: 4px;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
 
   @media (width >= 768px) {
-    grid-template-rows: auto;
     max-height: 572px;
-    grid-template-columns: 285px 1fr;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
   }
 
   &__sidebar {
     background-color: #f0f0f0;
-    padding-inline: 30px; //!
-    overflow-x: hidden;
+    overflow: auto;
   }
 
   &__cards {
     display: flex;
-    // flex-direction: column;
-    overflow-x: auto;
+    overflow: auto;
     gap: 30px;
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: 30px;
     padding-bottom: 30px;
+    padding-inline: clamp(30px, 4vw, 47px);
+
+    @media (width >= 768px) {
+      flex-direction: column;
+    }
   }
 
   &__head {
@@ -98,12 +105,8 @@ body {
     align-items: center;
     justify-content: space-between;
     column-gap: 10px;
-    padding-block: 30px;
-
-    &--border {
-      border-bottom: 2px solid #d9d9d9;
-      padding-inline: 15px;
-    }
+    padding-block: clamp(30px, 5vw, 50px);
+    padding-inline: clamp(30px, 4vw, 47px);
   }
 
   &__title {
@@ -138,7 +141,7 @@ body {
 
   &__total {
     font-weight: 700;
-    font-size: clamp(23px, 3vw, 30px);
+    font-size: clamp(23px, 3vw, 33px);
 
     sup {
       font-size: 0.7em;
@@ -149,7 +152,9 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 44px;
-    padding: 30px 15px;
+    border-top: 2px solid #d9d9d9;
+    margin-inline: clamp(15px, 4vw, 47px);
+    padding-block: clamp(15px, 5vw, 60px);
   }
 }
 
@@ -159,10 +164,13 @@ body {
   flex-direction: column;
   border: 2px solid #d9d9d9;
   border-radius: 4px;
-  padding: 20px 14px;
+  padding: 20px 15px 15px;
   background-color: #fff;
   color: #4e4e4e;
-  min-width: 100%;
+  scroll-snap-align: center;
+  width: 100%;
+  max-width: 290px;
+  flex-shrink: 0;
 
   @media (hover: hover) {
     cursor: pointer;
@@ -174,7 +182,7 @@ body {
 
   &__image {
     display: block;
-    width: 64px;
+    width: 76px;
     padding-bottom: 5px;
   }
 
@@ -184,11 +192,14 @@ body {
 
   &__number {
     font-size: 18px;
+    white-space: nowrap;
     font-weight: 500;
+    letter-spacing: 0.02em;
   }
 
   &__validity {
     font-weight: 500;
+    font-size: 17px;
   }
 }
 
